@@ -1,1 +1,1 @@
-# binary-timer-homework
+# Binary Timer (Homework 3)

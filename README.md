@@ -99,16 +99,8 @@ spi.write(b'\x07')
 
 Here an example of how the LEDs are mapped to time.
 
-IMAGE
-IMAGE
-IMAGE
-IMAGE
-
-IMAGE
-IMAGE
-IMAGE
-IMAGE
-
-IMAGE
+<p align="center">
+<img src="data/time_mapping.png" width="80%" />
+</p>
 
 - Use an analog pin (P0) to read the rotation of the potentiometer, and maps the value to a PWM duty cycle (on P3).

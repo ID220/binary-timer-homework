@@ -19,7 +19,7 @@ The **objectives** of this homework are to learn:
 ## Content of this folder
 
 - [_SubmissionForm.md_](./SubmissionForm.md): the form containing the information about your submission.
-- _data_: a folder with the schematics and images use in this document.
+- _data_: a folder with the schematics and images used in this document.
 - _README_: this file, containing the instructions.
 
 ## How does the timer work?
@@ -28,13 +28,17 @@ The **objectives** of this homework are to learn:
 <img src="data/overview.png" width="80%" />
 </p>
 
-TODO
-TODO
-TODO
-TODO
-TODO
+The timer has two modes of operation: an **input mode** to allow users to insert a specific time (hours, minutes and seconds), and a **countdown mode** that shows a countdown from the time set by the uesr to 0.
 
-## Getting started
+The time is displayed in binary format using an LED display (4 red LEDs for hours, 6 green LEDs for minutes and 6 yellow LEDs for seconds), controlled by a pair of shift registers placed in series.
+
+When the micro:bit is turned on (or reset), the timer is in input mode, and the LED matrix shows `H` for hours. By clicking the `A` button, the user can cycle through minutes (`M`), seconds (`S`), and then back to hours (`H`) and so on. By clicing (or holding down) on the `B` button, the user can increment of 1 the counter of hours, minutes, seconds, depending on the current selection.
+
+Once the user is done inputing a time, the user can click on a pushbutton to initiate the counter. The counter shows the time decreasing 1 by 1 until it reaches 0 and it stops. For the purpose of the demo, the timer counts down every 0.5 seconds.
+
+Finally, a potentiometer allows to control the brightness of all the LEDs simultaneously, from 0 brightness (LEDs are off) to maximum brightness (LEDs fully on).
+
+## Detailed instructions
 
 The homework consists of two parts. Create the **hardware** of the circuit based on the schematics, and write the **firmware** (e.g., the MicroPython code) to make it work.
 
@@ -96,8 +100,7 @@ spi.write(b'\x07')
 ```
 
 - You can organize the LEDs in any order you want to, but the user should see 4 LEDs for hours, 6 for minutes and 6 for seconds. This configuration allows to cover any time from 00:00:00 to 11:59:59 (the maxim time).
-
-Here an example of how the LEDs are mapped to time.
+- Here an example of how the LEDs are mapped to time.
 
 <p align="center">
 <img src="data/time_mapping.png" width="80%" />

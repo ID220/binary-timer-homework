@@ -121,7 +121,7 @@ Take clear photos of your breadboard, the [_SubmissionForm.md_](./SubmissionForm
 **DO NOT SUBMIT THE VIDEO USING THE HOMEWORK SYSTEM**. Instead, upload the video online (YouTube, Google Drive...) and place a public link to the video inside the [_SubmissionForm.md_](./SubmissionForm.md) file. The video should show a working demo of your prototype. Feeel free to use a voice-over exlaining how the system is working.
 
 <p align="center">
-<img src="images/hwsystem.png" width="500" />
+<img src="data/hwsystem.png" width="500" />
 </p>
 
 Please note that:

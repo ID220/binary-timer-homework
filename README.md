@@ -28,11 +28,15 @@ The **objectives** of this homework are to learn:
 <img src="data/overview.png" width="80%" />
 </p>
 
-The timer has two modes of operation: an **input mode** to allow users to insert a specific time (hours, minutes and seconds), and a **countdown mode** that shows a countdown from the time set by the uesr to 0.
+The timer has two modes of operation: an **input mode** to allow users to insert a specific time (hours, minutes and seconds), and a **countdown mode** that shows a countdown from the time set by the user down to 0.
 
 The time is displayed in binary format using an LED display (4 red LEDs for hours, 6 green LEDs for minutes and 6 yellow LEDs for seconds), controlled by a pair of shift registers placed in series.
 
-When the micro:bit is turned on (or reset), the timer is in input mode, and the LED matrix shows `H` for hours. By clicking the `A` button, the user can cycle through minutes (`M`), seconds (`S`), and then back to hours (`H`) and so on. By clicing (or holding down) on the `B` button, the user can increment of 1 the counter of hours, minutes, seconds, depending on the current selection.
+<p align="center">
+<img src="data/time_mapping.png" width="80%" />
+</p>
+
+When the micro:bit is turned on (or reset), the timer is in input mode, and the LED matrix shows `H` for hours. By clicking the **A button**, the user can cycle through minutes (`M`), seconds (`S`), and then back to hours (`H`) and so on. By clicking (or holding down) on the **B button**, the user can increment of 1 the counter of hours, minutes, seconds, depending on the current selection. If reaching the maximum value, the counter wraps back (e.g., 59 minutes + 1 goes back to 0 minutes).
 
 Once the user is done inputing a time, the user can click on a pushbutton to initiate the counter. The counter shows the time decreasing 1 by 1 until it reaches 0 and it stops. For the purpose of the demo, the timer counts down every 0.5 seconds.
 
@@ -54,7 +58,7 @@ This is an overview of the circuit (click on the image to see a larger view in P
 
 - The **Voltage regulator** takes as input 9V from the battery and output voltage at 5V. The status LED shows the LED on when the circuit is operating.
 - We use two 8-bit shift registers (74HC595) to source current to 16 LEDs (4 for hours, 6 for minutes and 6 for seconds). Use any of the methods shown in class to send data to the shift registers.
-- The 16 LEDs are not connected directly to GND. Instead, there is an NPN transistor (TIP120) between the cathodes and ground. The base of the transistor is connected to pin 3 of the micro:bit, which uses PWM to modulate how all LEDs are on. The PWM value is determined by how the potentiometer (connected to P0) is rotated (from 0% to 100%).
+- The 16 LEDs are not connected directly to GND. Instead, there is an NPN transistor (TIP120) between the cathodes and the ground. The base of the transistor is connected to pin 3 of the micro:bit, which uses PWM to modulate how all LEDs are on. The PWM value is determined by how the potentiometer (connected to P0) is rotated (from 0% to 100%).
 
 #### Bill of Material (BOM)
 
@@ -99,26 +103,21 @@ spi.init(10000, 8, 0,
 spi.write(b'\x07')
 ```
 
-- You can organize the LEDs in any order you want to, but the user should see 4 LEDs for hours, 6 for minutes and 6 for seconds. This configuration allows to cover any time from 00:00:00 to 11:59:59 (the maxim time).
-- Here an example of how the LEDs are mapped to time.
-
-<p align="center">
-<img src="data/time_mapping.png" width="80%" />
-</p>
-
+- You can organize the LEDs in any order you want to (e.g., they do not have to be in sequential order if you do not want to), but the user should see 4 LEDs for hours, 6 for minutes and 6 for seconds. This configuration allows to cover any time from 00:00:00 to 11:59:59 (the maxim time).
+- When the time of the countdown reaches 0, you can display a short message on the LED matrix, or nothing (like in my video).
 - Use an analog pin (P0) to read the rotation of the potentiometer, and maps the value to a PWM duty cycle (on P3).
 
 ## Submission and grading
 
 You have to submit the following items:
 
-1. The sumbmission form containing your information and video link: [_SubmissionForm.md_](./SubmissionForm.md)
-2. Clear photos of your breadboard circuit
+1. The submission form containing your information and video link: [_SubmissionForm.md_](./SubmissionForm.md)
+2. Clear photos (3 max) of your breadboard circuit
 3. Your MicroPython sketch with the code
 
 Take clear photos of your breadboard, the [_SubmissionForm.md_](./SubmissionForm.md), and the code, zip them together (_zip_, not _ALZIP_, _rar_ or others) and submit this resulting file using the [homework submission system](https://homework.prototyping.id). Make sure the zip file is smaller than 20MB.
 
-**DO NOT SUBMIT THE VIDEO USING THE HOMEWORK SYSTEM**. Instead, upload the video online (YouTube, Google Drive...) and place a public link to the video inside the [_SubmissionForm.md_](./SubmissionForm.md) file. The video should show a working demo of your prototype. Feeel free to use a voice-over exlaining how the system is working.
+**DO NOT SUBMIT THE VIDEO USING THE HOMEWORK SYSTEM**. Instead, upload the video online (YouTube, Google Drive...) and place a public link to the video inside the [_SubmissionForm.md_](./SubmissionForm.md) file. The video should show a working demo of your prototype. Feel free to use a voice-over explaining how the system is working.
 
 <p align="center">
 <img src="data/hwsystem.png" width="500" />

@@ -57,6 +57,7 @@ This is an overview of the circuit (click on the image to see a larger view in P
 </a>
 
 - The **Voltage regulator** takes as input 9V from the battery and output voltage at 5V. The status LED shows the LED on when the circuit is operating.
+- By **extremely CAREFUL** of not mixing 3V and 5V. `Anything connected back to the micro:bit should be 3V, or the micro:bit will be damaged!!` Check out the schematics _very carefully_.
 - We use two 8-bit shift registers (74HC595) to source current to 16 LEDs (4 for hours, 6 for minutes and 6 for seconds). Use any of the methods shown in class to send data to the shift registers.
 - The 16 LEDs are not connected directly to GND. Instead, there is an NPN transistor (TIP120) between the cathodes and the ground. The base of the transistor is connected to pin 3 of the micro:bit, which uses PWM to modulate how all LEDs are on. The PWM value is determined by how the potentiometer (connected to P0) is rotated (from 0% to 100%).
 

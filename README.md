@@ -107,6 +107,7 @@ spi.write(b'\x07')
 - You can organize the LEDs in any order you want to (e.g., they do not have to be in sequential order if you do not want to), but the user should see 4 LEDs for hours, 6 for minutes and 6 for seconds. This configuration allows to cover any time from 00:00:00 to 11:59:59 (the maxim time).
 - When the time of the countdown reaches 0, you can display a short message on the LED matrix, or nothing (like in my video).
 - Use an analog pin (P0) to read the rotation of the potentiometer, and maps the value to a PWM duty cycle (on P3).
+- To use Pin3 (which is normally attached to the LED Col 1 of your display) you need to deactivate the display with `display.off()`. If you however want to use the display again, then you have to re-activate it by writing `display.on()`.
 
 ## Submission and grading
 

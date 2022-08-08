@@ -1,10 +1,10 @@
-# Binary Timer (Homework 3)
+# Homework 3: Binary Timer
 
-In this homework you will create an interactive binary timer based on the schematics of a circuit. You will have to create a circuit on a breadboard and write the code on the micro:bit to control the timer.
+In this homework you will create an interactive binary timer based on the schematics of a circuit. You will have to create a circuit on a breadboard and write the MicroPython code to control the timer.
 
-Click on the image below to see a [demo video](https://youtu.be/W0_Qsd6zZZQ) of how the timer works:
+Click on the image below to see a [demo video](XYZ) of how the timer works:
 
-<a href="https://youtu.be/W0_Qsd6zZZQ">
+<a href="XYZ">
 <p align="center">
 <img src="data/video_thumbnail.png" width="80%" />
 </p>
@@ -12,7 +12,7 @@ Click on the image below to see a [demo video](https://youtu.be/W0_Qsd6zZZQ) of 
 
 The **objectives** of this homework are to learn:
 
-- digital input and output, analog input and output (PWM) using micro:bit
+- digital input and output, analog input and output (PWM) using MicroPython
 - controlling many LEDs using shift registers
 - binary numbers and binary operators
 
@@ -36,7 +36,11 @@ The time is displayed in binary format using an LED display (4 red LEDs for hour
 <img src="data/time_mapping.png" width="80%" />
 </p>
 
-When the micro:bit is turned on (or reset), the timer is in input mode, and the LED matrix shows `H` for hours. By clicking the **A button**, the user can cycle through minutes (`M`), seconds (`S`), and then back to hours (`H`) and so on. By clicking (or holding down) on the **B button**, the user can increment of 1 the counter of hours, minutes, seconds, depending on the current selection. If reaching the maximum value, the counter wraps back (e.g., 59 minutes + 1 goes back to 0 minutes).
+---
+
+** HERE **
+
+When the RPi is turned on (or reset), the timer is in input mode, and the BlinkPico LED matrix shows `H` for hours. By clicking the **A and B buttons**, the user can cycle through minutes (`M`), seconds (`S`), and then back to hours (`H`) and so on. By clicking (or holding down) on the **B button**, the user can increment of 1 the counter of hours, minutes, seconds, depending on the current selection. If reaching the maximum value, the counter wraps back (e.g., 59 minutes + 1 goes back to 0 minutes).
 
 Once the user is done inputing a time, the user can click on a pushbutton to initiate the counter. The counter shows the time decreasing 1 by 1 until it reaches 0 and it stops. For the purpose of the demo, the timer counts down every 0.5 seconds.
 

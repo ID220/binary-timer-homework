@@ -52,7 +52,7 @@ The homework consists of two parts. Create the **hardware** of the circuit based
 
 This is an overview of the circuit (click on the image to see a larger view in PDF format).
 
-<a href="data/schematics.pdf">
+<a href="./data/schematics.pdf">
 <p align="center">
 <img src="data/schematics.png" width="80%" />
 </p>

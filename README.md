@@ -2,9 +2,9 @@
 
 In this homework you will create an interactive binary timer based on the schematics of a circuit. You will have to create a circuit on a breadboard and write the MicroPython code to control the timer.
 
-Click on the image below to see a [demo video](XYZ) of how the timer works:
+Click on the image below to see a [demo video](https://youtu.be/km6rSBD77C8) of how the timer works:
 
-<a href="XYZ">
+<a href="https://youtu.be/km6rSBD77C8">
 <p align="center">
 <img src="data/video_thumbnail.png" width="80%" />
 </p>
@@ -12,7 +12,7 @@ Click on the image below to see a [demo video](XYZ) of how the timer works:
 
 The **objectives** of this homework are to learn:
 
-- digital input and output, analog input and output (PWM) using MicroPython
+- digital input and output, analog input and PWM using MicroPython
 - controlling many LEDs using shift registers
 - binary numbers and binary operators
 
@@ -25,7 +25,7 @@ The **objectives** of this homework are to learn:
 ## How does the timer work?
 
 <p align="center">
-<img src="data/overview.png" width="80%" />
+<img src="data/overview.png" width="100%" />
 </p>
 
 The timer has two modes of operation: an **input mode** to allow users to insert a specific time (hours, minutes and seconds), and a **countdown mode** that shows a countdown from the time set by the user down to 0.

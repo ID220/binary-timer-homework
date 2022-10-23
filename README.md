@@ -113,7 +113,7 @@ You have to submit the following items:
 - Clear photos (max 3) of your breadboard circuit showing the circuit overview and details (`20%`)
 - Your MicroPython code (`35%`)
 
-Take clear photos of your breadboard, the [_SubmissionForm.md_](./SubmissionForm.md), and the PDF containing the code, zip them together (_zip_, not _ALZIP_, _rar_ or others) and submit this resulting file using the [homework submission system](https://homework.prototyping.id). Make sure the zip file is smaller than 20MB.
+Take clear photos of your breadboard, the [_SubmissionForm.md_](./SubmissionForm.md), and the code, zip them together (_zip_, not _ALZIP_, _rar_ or others) and submit this resulting file using the [homework submission system](https://homework.prototyping.id). Make sure the zip file is smaller than 20MB.
 
 **DO NOT SUBMIT THE VIDEO USING THE HOMEWORK SYSTEM**. Instead, upload the video online (YouTube, Google Drive...) and place a public link to the video inside the [_SubmissionForm.md_](./SubmissionForm.md) file.
 
